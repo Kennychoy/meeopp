@@ -3,6 +3,10 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import { Form, FormGroup, Input } from "reactstrap";
 
+require("dotenv/config");
+
+var env_api_key = process.env.REACT_APP_API_KEY;
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -101,7 +105,7 @@ class App extends Component {
 		let q = qs;
 		let that = this;
 		
-		let API_key = "AIzaSyDpaRdTu7tVJpiYQVkvIvyrdjTwN2ryoeo";
+		let API_key = env_api_key;
 		let maxResults = 50;
 		let url = `https://www.googleapis.com/youtube/v3/search?key=${API_key}&part=snippet,id&q=${q}&maxResults=${maxResults}`;
 		let idArr = [];
@@ -115,7 +119,7 @@ class App extends Component {
 		})
 		.then(arr => {
 			let ids = arr.toString();
-			fetch("https://www.googleapis.com/youtube/v3/videos?id="+ids+"&key=AIzaSyDpaRdTu7tVJpiYQVkvIvyrdjTwN2ryoeo&part=snippet,statistics")
+			fetch("https://www.googleapis.com/youtube/v3/videos?id="+ids+"&key="+API_key+"&part=snippet,statistics")
 			.then(res => res.json())
 			.then(data => {
 				that.setState({videos: data.items}, console.log(that.state.videos))
