@@ -103,7 +103,7 @@ class App extends Component {
 		
 		let API_key = "AIzaSyDpaRdTu7tVJpiYQVkvIvyrdjTwN2ryoeo";
 		let maxResults = 50;
-		let url = `https://www.googleapis.com/youtube/v3/search?key=${API_key}&part=snippet,id&order=viewCount&q=${q}&maxResults=${maxResults}`;
+		let url = `https://www.googleapis.com/youtube/v3/search?key=${API_key}&part=snippet,id&q=${q}&maxResults=${maxResults}`;
 		let idArr = [];
 		fetch(url)
 		.then(res => res.json())
