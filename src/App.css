@@ -1,32 +1,1127 @@
-.App {
-  text-align: center;
+/* line 1, C:/Users/User/meeopp/src/scss/App.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS";
+  font-size: 16px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 1200px) {
+  /* line 10, C:/Users/User/meeopp/src/scss/App.scss */
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url("./bg-images/bg.jpeg") no-repeat center center;
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+  /* line 15, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 18, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .app-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  /* line 26, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content {
+    width: 960px;
+    height: 90%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+  /* line 36, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 40, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a {
+    width: 30%;
+  }
+  /* line 42, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a img {
+    width: 100%;
+  }
+  /* line 47, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 50, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* line 53, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group {
+    display: flex;
+  }
+  /* line 55, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  /* line 59, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus {
+    box-shadow: none;
+  }
+  /* line 61, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus::placeholder {
+    color: transparent;
+  }
+  /* line 66, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button {
+    border: none;
+    background: linear-gradient(to right, #d31c6e, #ea382a);
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: .3s all;
+  }
+  /* line 73, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #d31c6e, #ea382a);
+    color: #000;
+  }
+  /* line 82, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 87, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #737373;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: none;
+    width: 80%;
+    transition: .3s all;
+  }
+  /* line 98, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px #737373;
+  }
+  /* line 102, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc {
+    flex-basis: 50%;
+  }
+  /* line 104, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  /* line 108, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc i {
+    margin-right: 5px;
+  }
+  /* line 111, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc p {
+    margin-bottom: 0;
+  }
+  /* line 116, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper {
+    flex-basis: 50%;
+    position: relative;
+  }
+  /* line 119, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper img {
+    width: 100%;
+  }
+  /* line 122, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 126, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s all;
+  }
+  /* line 134, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    transition: .3s all;
+  }
+  /* line 143, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer:hover {
+    background: transparent;
+  }
+  /* line 153, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    transition: .3s all;
+  }
+  /* line 163, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 170, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 173, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i {
+    color: #fff;
+    font-size: 36px;
+    transition: .3s all;
+  }
+  /* line 177, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* line 183, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner iframe {
+    width: 560px;
+    height: 315px;
+  }
+  /* line 190, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .popup-vdo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 207, C:/Users/User/meeopp/src/scss/App.scss */
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url("./bg-images/bg.jpeg") no-repeat center center;
+    background-size: cover;
+  }
+  /* line 212, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 215, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .app-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  /* line 223, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content {
+    width: 960px;
+    height: 90%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+  /* line 233, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 237, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a {
+    width: 30%;
+  }
+  /* line 239, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a img {
+    width: 100%;
+  }
+  /* line 244, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 247, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* line 250, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group {
+    display: flex;
+  }
+  /* line 252, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  /* line 256, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus {
+    box-shadow: none;
+  }
+  /* line 258, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus::placeholder {
+    color: transparent;
+  }
+  /* line 263, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button {
+    border: none;
+    background: linear-gradient(to right, #d31c6e, #ea382a);
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: .3s all;
+  }
+  /* line 270, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #d31c6e, #ea382a);
+    color: #000;
+  }
+  /* line 279, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 284, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #737373;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: none;
+    width: 80%;
+    transition: .3s all;
+  }
+  /* line 295, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px #737373;
+  }
+  /* line 299, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc {
+    flex-basis: 50%;
+  }
+  /* line 301, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  /* line 305, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc i {
+    margin-right: 5px;
+  }
+  /* line 308, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc p {
+    margin-bottom: 0;
+  }
+  /* line 313, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper {
+    flex-basis: 50%;
+    position: relative;
+  }
+  /* line 316, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper img {
+    width: 100%;
+  }
+  /* line 319, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 323, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s all;
+  }
+  /* line 331, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    transition: .3s all;
+  }
+  /* line 340, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer:hover {
+    background: transparent;
+  }
+  /* line 350, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    transition: .3s all;
+  }
+  /* line 360, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 367, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 370, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i {
+    color: #fff;
+    font-size: 36px;
+    transition: .3s all;
+  }
+  /* line 374, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* line 380, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner iframe {
+    width: 560px;
+    height: 315px;
+  }
+  /* line 387, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .popup-vdo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 404, C:/Users/User/meeopp/src/scss/App.scss */
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url("./bg-images/bg.jpeg") no-repeat center center;
+    background-size: cover;
+  }
+  /* line 409, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 412, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .app-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  /* line 420, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content {
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+  /* line 430, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 434, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a {
+    width: 30%;
+  }
+  /* line 436, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a img {
+    width: 100%;
+  }
+  /* line 441, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 444, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* line 447, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group {
+    display: flex;
+  }
+  /* line 449, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  /* line 453, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus {
+    box-shadow: none;
+  }
+  /* line 455, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus::placeholder {
+    color: transparent;
+  }
+  /* line 460, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button {
+    border: none;
+    background: linear-gradient(to right, #d31c6e, #ea382a);
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: .3s all;
+  }
+  /* line 467, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #d31c6e, #ea382a);
+    color: #000;
+  }
+  /* line 476, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 481, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #737373;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: none;
+    width: 80%;
+    transition: .3s all;
+  }
+  /* line 492, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px #737373;
+  }
+  /* line 496, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc {
+    flex-basis: 50%;
+  }
+  /* line 498, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  /* line 502, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc i {
+    margin-right: 5px;
+  }
+  /* line 505, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc p {
+    margin-bottom: 0;
+  }
+  /* line 510, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper {
+    flex-basis: 50%;
+    position: relative;
+  }
+  /* line 513, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper img {
+    width: 100%;
+  }
+  /* line 516, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 520, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s all;
+  }
+  /* line 528, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    transition: .3s all;
+  }
+  /* line 537, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer:hover {
+    background: transparent;
+  }
+  /* line 547, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    transition: .3s all;
+  }
+  /* line 557, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 564, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 567, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i {
+    color: #fff;
+    font-size: 36px;
+    transition: .3s all;
+  }
+  /* line 571, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* line 577, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner iframe {
+    width: 560px;
+    height: 315px;
+  }
+  /* line 584, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .popup-vdo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 601, C:/Users/User/meeopp/src/scss/App.scss */
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url("./bg-images/bg.jpeg") no-repeat center center;
+    background-size: cover;
+  }
+  /* line 606, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 609, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .app-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  /* line 617, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content {
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+  /* line 627, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 631, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a {
+    width: 30%;
+  }
+  /* line 633, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a img {
+    width: 100%;
+  }
+  /* line 638, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 641, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* line 644, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group {
+    display: flex;
+  }
+  /* line 646, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  /* line 650, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus {
+    box-shadow: none;
+  }
+  /* line 652, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus::placeholder {
+    color: transparent;
+  }
+  /* line 657, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button {
+    border: none;
+    background: linear-gradient(to right, #d31c6e, #ea382a);
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: .3s all;
+  }
+  /* line 664, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #d31c6e, #ea382a);
+    color: #000;
+  }
+  /* line 673, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 678, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #737373;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: none;
+    width: 80%;
+    transition: .3s all;
+  }
+  /* line 689, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px #737373;
+  }
+  /* line 693, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc {
+    flex-basis: 50%;
+  }
+  /* line 695, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  /* line 699, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc i {
+    margin-right: 5px;
+  }
+  /* line 702, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc p {
+    margin-bottom: 0;
+  }
+  /* line 707, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper {
+    flex-basis: 50%;
+    position: relative;
+  }
+  /* line 710, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper img {
+    width: 100%;
+  }
+  /* line 713, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 717, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s all;
+  }
+  /* line 725, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    transition: .3s all;
+  }
+  /* line 734, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer:hover {
+    background: transparent;
+  }
+  /* line 744, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    transition: .3s all;
+  }
+  /* line 754, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 761, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 764, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i {
+    color: #fff;
+    font-size: 36px;
+    transition: .3s all;
+  }
+  /* line 768, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* line 774, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner iframe {
+    width: 560px;
+    height: 315px;
+  }
+  /* line 781, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .popup-vdo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 798, C:/Users/User/meeopp/src/scss/App.scss */
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url("./bg-images/bg.jpeg") no-repeat center center;
+    background-size: cover;
+  }
+  /* line 803, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 806, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .app-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  /* line 814, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content {
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+  /* line 824, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 828, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a {
+    width: 45%;
+  }
+  /* line 830, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content header a img {
+    width: 100%;
+  }
+  /* line 835, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 838, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* line 841, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 844, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+  }
+  /* line 849, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus {
+    box-shadow: none;
+  }
+  /* line 851, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group input:focus::placeholder {
+    color: transparent;
+  }
+  /* line 856, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button {
+    border: none;
+    background: linear-gradient(to right, #d31c6e, #ea382a);
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: .3s all;
+  }
+  /* line 863, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .search form .form-group button:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #d31c6e, #ea382a);
+    color: #000;
+  }
+  /* line 872, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 877, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #737373;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: none;
+    width: 80%;
+    transition: .3s all;
+  }
+  /* line 889, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px #737373;
+  }
+  /* line 893, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc {
+    flex-basis: 50%;
+    order: 2;
+  }
+  /* line 896, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  /* line 900, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc i {
+    margin-right: 5px;
+  }
+  /* line 903, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-desc .vdo-misc p {
+    margin-bottom: 0;
+  }
+  /* line 908, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper {
+    flex-basis: 50%;
+    position: relative;
+  }
+  /* line 911, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper img {
+    width: 100%;
+  }
+  /* line 914, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 918, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s all;
+  }
+  /* line 926, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    transition: .3s all;
+  }
+  /* line 935, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content .videos .single-vdo .vdo-wrapper .vdo-wrapper-layer:hover {
+    background: transparent;
+  }
+  /* line 945, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    transition: .3s all;
+  }
+  /* line 955, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* line 965, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 968, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i {
+    color: #fff;
+    font-size: 36px;
+    transition: .3s all;
+  }
+  /* line 972, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* line 978, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .content-layer .layer-inner iframe {
+    width: 100%;
+    height: auto;
+  }
+  /* line 985, C:/Users/User/meeopp/src/scss/App.scss */
+  body .App .popup-vdo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/*# sourceMappingURL=../App.map */

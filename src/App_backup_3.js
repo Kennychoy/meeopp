@@ -68,9 +68,7 @@ class App extends Component {
 					
 						<div className="content-layer hide-vdo">
 							<div className="layer-inner">
-								<div className="close-btn">
-									<i className="fas fa-times fa-fw"></i>
-								</div>
+								<div className="close-btn"><i className="fas fa-times fa-fw"></i></div>
 								<iframe className="youtube-video" src="" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 							</div>
 						</div>
@@ -124,12 +122,12 @@ class App extends Component {
 				Array.from(document.querySelectorAll(".single-vdo")).forEach( vdo => {
 					vdo.addEventListener("click", () => {
 						let id = vdo.getAttribute("data-id");						
-						document.querySelector(".content-layer").classList.add("popup-vdo");
+						document.querySelector(".content-layer").classList.toggle("popup-vdo");
 						document.querySelector(".content-layer").querySelector("iframe").setAttribute("src", "https://www.youtube.com/embed/"+id);
 					});
 				});	
 				document.querySelector(".close-btn i").addEventListener("click", () => {					
-					document.querySelector(".content-layer").classList.remove("popup-vdo");
+					document.querySelector(".content-layer").classList.toggle("popup-vdo");
 					document.querySelector("iframe").setAttribute("src", "");
 				});				
 			})
